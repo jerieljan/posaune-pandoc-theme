@@ -18,7 +18,7 @@ function convert_file() {
    
     FILENAME=`echo "${FILE}" | sed "s_${WORKING}/__g" | sed "s/.md//g"`
 
-    pandoc -f markdown --css "${STYLESHEET}" --to=html5 "${FILENAME}.md" -o "${FILENAME}.html" --self-contained && wkhtmltopdf --dpi 500 "${FILENAME}.html" "${FILENAME}.pdf" && echo "Generated ${FILENAME}.html and ${FILENAME}.md"
+    pandoc -f markdown --css "${STYLESHEET}" --to=html5 "${FILENAME}.md" -o "${FILENAME}.html" --self-contained && wkhtmltopdf --dpi 500 "${FILENAME}.html" "${FILENAME}.pdf" && echo "Generated ${FILENAME}.html and ${FILENAME}.pdf"
 }
 
 cd "${WORKING}"
