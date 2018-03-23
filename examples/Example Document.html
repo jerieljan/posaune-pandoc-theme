@@ -388,6 +388,19 @@ page-break-after: avoid;
 <h2 id="about-this-theme">About this Theme</h2>
 <div class="Description">
 <p>This is a <strong>Markdown</strong> document generated with the stylesheet in this repository.</p>
+<p>To generate these, follow the <code>README.md</code> requirements, place the contents of the project (i.e., <code>generate.sh</code> and <code>theme.css</code>) in the same directory where this file is located.</p>
+<p>It should produce output similar to this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1">$ <span class="ex">./generate.sh</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">[<span class="ex">WARNING</span>] This document format requires a nonempty <span class="op">&lt;</span>title<span class="op">&gt;</span> element.</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="ex">Please</span> specify either <span class="st">'title'</span> or <span class="st">'pagetitle'</span> in the metadata.</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="ex">Falling</span> back to <span class="st">'Example Document'</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="ex">Loading</span> pages (1/6)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="ex">Counting</span> pages (2/6)</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="ex">Resolving</span> links (4/6)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="ex">Loading</span> headers and footers (5/6)</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="ex">Printing</span> pages (6/6)</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="ex">Done</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="ex">Generated</span> Example Document.html and Example Document.pdf</a></code></pre></div>
 </div>
 <h3 id="special-markup">Special Markup</h3>
 <div class="Description">
@@ -475,9 +488,9 @@ page-break-after: avoid;
 in a block</code></pre>
 <p>Inline blocks work nicely for <strong><code>class</code></strong> and object references. like <code>String</code> and such.</p>
 <p>And here’s a code block.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><a class="sourceLine" id="cb2-1" data-line-number="1">    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) {</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Hello world!&quot;</span>);</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">    }</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><a class="sourceLine" id="cb3-1" data-line-number="1">    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) {</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Hello world!&quot;</span>);</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    }</a></code></pre></div>
 <h3 id="images">Images</h3>
 <p>Here’s a <strong>picture of a trombone</strong>.</p>
 <figure>

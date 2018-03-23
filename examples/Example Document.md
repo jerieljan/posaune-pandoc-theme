@@ -7,6 +7,27 @@
 :::Description
 This is a **Markdown** document generated with 
 the stylesheet in this repository.
+
+To generate these, follow the `README.md` requirements, 
+place the contents of the project (i.e., `generate.sh` and `theme.css`) 
+in the same directory where this file is located.
+
+It should produce output similar to this:
+
+```bash
+$ ./generate.sh
+[WARNING] This document format requires a nonempty <title> element.
+  Please specify either 'title' or 'pagetitle' in the metadata.
+  Falling back to 'Example Document'
+Loading pages (1/6)
+Counting pages (2/6)
+Resolving links (4/6)
+Loading headers and footers (5/6)
+Printing pages (6/6)
+Done
+Generated Example Document.html and Example Document.pdf
+```
+
 :::
 
 ### Special Markup
