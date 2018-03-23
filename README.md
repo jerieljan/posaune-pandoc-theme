@@ -4,37 +4,43 @@ A simple Pandoc stylesheet.
 
 ## Requirements
 
-- The *Roboto Condensed* [font](https://fonts.google.com/specimen/Roboto+Condensed)
-- `pandoc`
-- A PDF engine.
+- The stylesheet uses [*Roboto Condensed* font](https://fonts.google.com/specimen/Roboto+Condensed) as its primary font.
+- `pandoc` is used to generate other document formats
+- *PDF engines* are used to generate PDF.
  - `tex`
  - `wkhtml2pdf`
 
 ## Usage
 
+### Generate HTML and PDF: 
+
+Use `build.sh` to generate HTML and PDF for all `.md` files in the directory.
+
 ### HTML:
 
-    pandoc -f markdown --css theme.css --to=html5 <input-file.md> -o <output-file.html> --self-contained
+- Using `pandoc` on a terminal...
+
+```bash
+pandoc -f markdown --css theme.css --to=html5 <input-file.md> -o <output-file.html> --self-contained
+```
 
 
 ### PDF:
 
-- Install a PDF engine (BasicTeX)
+- With a PDF engine installed (e.g., BasicTeX)...
 
-    pandoc -f markdown --to=pdf <input-file.md> -o <output-file.pdf>
-
+```bash
+pandoc -f markdown --to=pdf <input-file.md> -o <output-file.pdf>
+```    
 
 ### Styled PDF:
 
-- Install the `wkhtmltopdf` PDF engine
-- Do the HTML steps, then:
+- With `wkhtmltopdf` PDF engine installed, along with a generated HTML file:
 
-    wkhtmltopdf --dpi 500 [--disable-smart-shrinking] "output-file.html" "output-file.pdf"
+```bash
+    wkhtmltopdf --dpi [preferred-dpi] [--disable-smart-shrinking] "output-file.html" "output-file.pdf"
+```
 
-
-### Notes
-
-- Other builds of wkhtmltopdf (MacOS) may strip CSS data with smart-shrinking on.
-- pandoc and wkhtmltopdf may vary across Linux distros / MacOS. For example, MacOS can opt for BasicTeX instead
-  of the entre TeX package, and Arch Linux may prefer wkhtmltopdf-static in AUR to match a version of QT that it
-  needs. Your mileage may vary.
+- You may want to use "300" or "500" for the preferred DPI. This is needed because some high-resolution displays can affect how `wkhtmltopdf` generates its PDFs.
+- Other builds of `wkhtmltopdf` (MacOS) may strip CSS data with smart-shrinking on. See if it works out for you.
+- `pandoc` and `wkhtmltopdf` may vary across Linux distros / MacOS. For example, MacOS can opt for BasicTeX instead of the entre TeX package, and Arch Linux may prefer wkhtmltopdf-static in AUR to match a version of QT that it needs. Your mileage may vary.
