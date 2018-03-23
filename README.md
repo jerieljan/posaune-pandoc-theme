@@ -44,3 +44,7 @@ pandoc -f markdown --to=pdf <input-file.md> -o <output-file.pdf>
 - You may want to use "300" or "500" for the preferred DPI. This is needed because some high-resolution displays can affect how `wkhtmltopdf` generates its PDFs.
 - Other builds of `wkhtmltopdf` (MacOS) may strip CSS data with smart-shrinking on. See if it works out for you.
 - `pandoc` and `wkhtmltopdf` may vary across Linux distros / MacOS. For example, MacOS can opt for BasicTeX instead of the entre TeX package, and Arch Linux may prefer wkhtmltopdf-static in AUR to match a version of QT that it needs. Your mileage may vary.
+
+## Credits
+
+The original stylesheet was based off on [killercup/pandoc.css](https://gist.github.com/killercup/5917178). 
