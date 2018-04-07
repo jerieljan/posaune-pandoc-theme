@@ -12,20 +12,26 @@ A simple Pandoc stylesheet.
 
 ## Usage
 
-### Generate HTML and PDF: 
+### Using the build script (HTML and PDF)
 
-Use `build.sh` to generate HTML and PDF for all `.md` files in the directory.
+- Copy `build.sh` and `theme.css` to the same directory where your *Markdown* files are located
+- Run `build.sh` to generate HTML and PDF for all `.md` files in the directory.
 
-### HTML:
 
-- Using `pandoc` on a terminal...
+### Manually via pandoc
+
+Just like how the build script generates pages, you can always generate HTML and PDF output 
+manually through the terminal using `pandoc`.
+
+See the examples below:
+
+**HTML**
 
 ```bash
 pandoc -f markdown --css theme.css --to=html5 <input-file.md> -o <output-file.html> --self-contained
 ```
 
-
-### PDF:
+**Basic PDF**
 
 - With a PDF engine installed (e.g., BasicTeX)...
 
@@ -33,7 +39,7 @@ pandoc -f markdown --css theme.css --to=html5 <input-file.md> -o <output-file.ht
 pandoc -f markdown --to=pdf <input-file.md> -o <output-file.pdf>
 ```    
 
-### Styled PDF:
+**Styled PDF**
 
 - With `wkhtmltopdf` PDF engine installed, along with a generated HTML file:
 
@@ -41,9 +47,18 @@ pandoc -f markdown --to=pdf <input-file.md> -o <output-file.pdf>
     wkhtmltopdf --dpi [preferred-dpi] [--disable-smart-shrinking] "output-file.html" "output-file.pdf"
 ```
 
+**Some additional notes**
+
 - You may want to use "300" or "500" for the preferred DPI. This is needed because some high-resolution displays can affect how `wkhtmltopdf` generates its PDFs.
 - Other builds of `wkhtmltopdf` (MacOS) may strip CSS data with smart-shrinking on. See if it works out for you.
 - `pandoc` and `wkhtmltopdf` may vary across Linux distros / MacOS. For example, MacOS can opt for BasicTeX instead of the entre TeX package, and Arch Linux may prefer wkhtmltopdf-static in AUR to match a version of QT that it needs. Your mileage may vary.
+
+## Issues?
+
+You can always file an issue at GitHub. I'm not available all the time though, so it may take
+a while for me to handle them, sorry about that.
+
+Feel free to submit pull requests though.
 
 ## Credits
 

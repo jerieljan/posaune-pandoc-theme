@@ -30,14 +30,14 @@ Generated Example Document.html and Example Document.pdf
 
 :::
 
-### Special Markup
+### Optional Extra Markup
 
 :::Description
 The theme supports additional styles through classes
 and can be used through `pandoc`'s syntax.
 
 - `.subtitle` is best used for describing the **title** just like in this document.
-- `.description` works well with **headers** by adding a mild background and connects
+- `.description` works well with **headers** by adding a mild *grey* background and connects
   the gap between the heading and the description. Pretty nifty if you want a "card"
   look.
 :::
