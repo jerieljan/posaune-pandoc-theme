@@ -1,6 +1,6 @@
 # Posaune
 
-A simple Pandoc stylesheet.
+A `pandoc` stylesheet that gives your Markdown files a nice and fresh look that's friendly for a single webpage and in PDF.
 
 ## Requirements
 
